@@ -1,7 +1,8 @@
 // To set two dates to two variables
-var date1 = new Date("2023-07-21T12:12:00");
-var date2 = new Date("2023-07-21T12:12:00");
+// var date1 = new Date("2023-07-21T12:00:00");
 
+var date1 = new Date();
+var date2 = new Date("2023-09-14T13:00:00");
 // To calculate the time difference of two dates
 var difference = date2.getTime() - date1.getTime();
 
