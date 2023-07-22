@@ -1,0 +1,56 @@
+.getDateMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background);
+    font-size: 1.2rem;
+    color: var(--text);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.getDateMain h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.getDateMain .inputDateTime {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 0.5em;
+    border: 1px solid var(--white);
+    border-radius: 0.5em;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.dateRes{
+    color: var(--text);
+    text-align: center;
+    padding: 0.5em;
+    border: 1px dashed var(--white);
+    background-color: var(--background-light);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+    cursor: pointer;
+    border-radius: 0.3em;
+    opacity: 0.8;
+}
+
+.dateRes:hover{
+    opacity: 1;
+}
+
+.dateRes p{
+    margin:0 1em;
+}
+
+.dateRes i{
+    font-style: normal;
+    font-weight: 800;
+}

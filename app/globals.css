@@ -1,0 +1,16 @@
+:root {
+    --background: #0E1015;
+    --background-light: #242731;
+    --purple: #918CED;
+    --green: #65D1AE;
+    --white: #FFFFFF;
+    --text:#E4E5E9;
+    --text-light: #A1A3AA;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
