@@ -34,6 +34,7 @@
     margin: 0.5em 0;
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    cursor: progress;
 }
 
 .countdown:hover{
