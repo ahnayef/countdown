@@ -1,6 +1,7 @@
 import styles from './page.module.css'
 import Countdown from './(components)/countdown/page'
 import data from "./assets/target.json"
+import Head from 'next/head'
 
 
 export default function Home() {
@@ -9,7 +10,11 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Countdown title={data.title} targetDate={data.targetDate} />
+  <Head>
+    <title>Countdown</title>
+    <link rel="icon" href="/favicon.ico" />
+  </Head>
+      <Countdown title={data.title} targetDate={data.targetDate} subtitle={data.subtitle}/>
     </main>
   )
 }

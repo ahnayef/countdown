@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'clock';
+    src: url('../../assets/fonts/clock.ttf');
+}
+
+.countdownMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.countdownMain .title {
+    font-weight: 600;
+    padding: 0.5em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.countdownMain .countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text);
+    border-radius: 0.3em;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+}
+
+.countdown:hover{
+    border: none;
+    box-shadow: 0 0 0.3em var(--purple);
+}
+
+.countdown:hover .cdBox{
+    margin: 0.5em;
+    border: 1px solid var(--purple);
+    border-radius: 0.3em;
+    /* transition: margin 0.3s; */
+    transition: all  0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.countdown .cdBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.countdown .cdBox:last-child{
+    color: var(--purple);
+}
+
+.cdBox .cdTime {
+    font-size: 3em;
+    font-family: 'clock';
+}
+
+.cdBox .cdTname {
+    font-size: 1em;
+    /* font-family: 'clock'; */
+    margin-top: 1em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    
+}
+
+.countdownMain .subtitle{
+    font-size: 1em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    padding: 0.5em;
+    color: var(--text-light);
+    /* color: var(--green); */
+    /* opacity: 0.8; */
+}
+
+
+@media screen and (max-width: 768px) {
+    .countdownMain .title {
+        font-size: 1.5em;
+    }
+    .countdown .cdBox {
+        padding: 0.5em;
+    }
+    .cdBox .cdTime {
+        font-size: 2em;
+    }
+    .cdBox .cdTname {
+        font-size: 0.8em;
+    }
+    .countdownMain .subtitle{
+        font-size: 0.8em;
+    }
+}

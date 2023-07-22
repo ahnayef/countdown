@@ -38,6 +38,9 @@ dependencies:
   typescript:
     specifier: 5.1.6
     version: 5.1.6
+  vanilla-tilt:
+    specifier: ^1.8.0
+    version: 1.8.0
 
 packages:
 
@@ -2295,6 +2298,10 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
+    dev: false
+
+  /vanilla-tilt@1.8.0:
+    resolution: {integrity: sha512-wVCHyyfRuiRdKhDTNxKPb60lkagmywDSqLgFETEr71Sm646AvGxuf/14Kx9A8FaISyYvMoKQHk6FTqt+YLGhEw==}
     dev: false
 
   /watchpack@2.4.0:
