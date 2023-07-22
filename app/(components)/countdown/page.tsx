@@ -70,7 +70,8 @@ export default function Countdown(props: any) {
 
   return (
     <div className={style.countdownMain}>
-      <h1 className={style.title}>{title}</h1>
+      <h1 className={style.title}>North East University Bangladesh</h1>
+      <h2 className={style.title}>{title}</h2>
       <div className={style.countdown} ref={tiltRef} >
         {difference < 0 ? "The time has come!" :
           // <div>{weeks} weeks {days} days {hours} hours {minutes} minutes {seconds} seconds</div>
