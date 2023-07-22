@@ -14,12 +14,11 @@ export default function Countdown(props: any) {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const tiltRef = useRef(null);
 
 
   useEffect(() => {
 
-    
+
     const interval = setInterval(() => {
       let date1 = new Date();
       let date2 = new Date(targetDate);
@@ -42,15 +41,14 @@ export default function Countdown(props: any) {
   }, [targetDate]);
 
 
+  const tiltRef = useRef(null);
+
   useEffect(() => {
 
     let width = document.body.clientWidth;
-
     if (width < 769) {
-
     } else {
       const tiltElement = tiltRef.current;
-
       if (tiltElement) {
         VanillaTilt.init(tiltElement, {
           max: 20,
@@ -76,32 +74,32 @@ export default function Countdown(props: any) {
       <div className={style.countdown} ref={tiltRef} >
         {difference < 0 ? "The time has come!" :
           // <div>{weeks} weeks {days} days {hours} hours {minutes} minutes {seconds} seconds</div>
-         <>
-         <div className={style.cdBox}>
-            <div className={style.cdTime}>{weeks}</div>
-            <div className={style.cdTname}>Weeks</div>
-          </div>
-         
-         <div className={style.cdBox}>
-            <div className={style.cdTime}>{days}</div>
-            <div className={style.cdTname}>Days</div>
-          </div>
-         
-         <div className={style.cdBox}>
-            <div className={style.cdTime}>{hours}</div>
-            <div className={style.cdTname}>hours</div>
-          </div>
-         
-         <div className={style.cdBox}>
-            <div className={style.cdTime}>{minutes}</div>
-            <div className={style.cdTname}>Minute</div>
-          </div>
-         
-         <div className={style.cdBox}>
-            <div className={style.cdTime}>{seconds}</div>
-            <div className={style.cdTname}>Seconds</div>
-          </div>
-         </>
+          <>
+            <div className={style.cdBox}>
+              <div className={style.cdTime}>{weeks}</div>
+              <div className={style.cdTname}>Weeks</div>
+            </div>
+
+            <div className={style.cdBox}>
+              <div className={style.cdTime}>{days}</div>
+              <div className={style.cdTname}>Days</div>
+            </div>
+
+            <div className={style.cdBox}>
+              <div className={style.cdTime}>{hours}</div>
+              <div className={style.cdTname}>hours</div>
+            </div>
+
+            <div className={style.cdBox}>
+              <div className={style.cdTime}>{minutes}</div>
+              <div className={style.cdTname}>Minute</div>
+            </div>
+
+            <div className={style.cdBox}>
+              <div className={style.cdTime}>{seconds}</div>
+              <div className={style.cdTname}>Seconds</div>
+            </div>
+          </>
 
 
         }

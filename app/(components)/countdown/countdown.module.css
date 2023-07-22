@@ -144,4 +144,11 @@
     .countdownMain .subtitle{
         font-size: 0.8em;
     }
+    .countdown:hover .cdBox{
+        margin: 0;
+        border: none;
+        border-radius:none;
+        /* transition: margin 0.3s; */
+        transition: none;
+    }
 }
