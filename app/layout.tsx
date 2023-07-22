@@ -1,12 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import data from "./assets/target.json"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Countdown',
-  description: 'Countdown to a date',
+  title: `Countdown | ${data.title}`,
+  description: `Countdown to a | ${data.title}`,
 }
 
 export default function RootLayout({
