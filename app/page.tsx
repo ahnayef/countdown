@@ -9,12 +9,19 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-  <Head>
-    <title>Countdown</title>
-    <link rel="icon" href="/favicon.ico" />
-    
-  </Head>
-      <Countdown title={data.title} targetDate={data.targetDate} subtitle={data.subtitle}/>
+      <Head>
+        <title>Countdown</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="NEUB | Spring 23 | CSE" />
+        <meta name="keywords" content="NEUB,Exam, Countdown, CSE" />
+        <meta property="og:title" content="Examcountdown" />
+        <meta property="og:url" content="http://spring23.netlify.app" />
+        <meta property="og:image"
+          content="https://raw.githubusercontent.com/ahnayef/countdown/master/app/assets/meta.png" />
+
+      </Head>
+      <Countdown title={data.title} targetDate={data.targetDate} subtitle={data.subtitle} />
     </main>
   )
 }
