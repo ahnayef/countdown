@@ -59,7 +59,6 @@ export default function Countdown(props: any) {
       label: `Page Visit ${today}`,
     });
 
-    console.log(today);
     
     
     let width = document.body.clientWidth;
