@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from 'react';
 import style from './countdown.module.css';
 import VanillaTilt from 'vanilla-tilt';
 import { FaGithub } from 'react-icons/fa';
+import ReactGA from "react-ga4";
 
 export default function Countdown(props: any) {
   const { targetDate, title, subtitle } = props;
-
   const [difference, setDifference] = useState(0);
   const [weeks, setWeeks] = useState(0);
   const [days, setDays] = useState(0);
@@ -15,6 +15,10 @@ export default function Countdown(props: any) {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
+  const [date, setDate] = useState(new Date());
+  const [today, setToday] = useState(date.toLocaleDateString("en-US", { weekday: 'long' }));
+
+  const MID=process.env.NEXT_PUBLIC_MID;
 
 
   useEffect(() => {
@@ -46,6 +50,18 @@ export default function Countdown(props: any) {
 
   useEffect(() => {
 
+    ReactGA.initialize(`${MID}`);
+    ReactGA.send("pageview");
+
+    ReactGA.event({
+      category: 'Page Visit',
+      action: `${today}`,
+      label: `Page Visit ${today}`,
+    });
+
+    console.log(today);
+    
+    
     let width = document.body.clientWidth;
     if (width < 769) {
     } else {
@@ -71,7 +87,7 @@ export default function Countdown(props: any) {
 
   return (
     <div className={style.countdownMain}>
-      <a id={style.gitIcon} href="https://github.com/ahnayef/countdown" target='_'><FaGithub/></a>
+      <a id={style.gitIcon} href="https://github.com/ahnayef/countdown" target='_'><FaGithub /></a>
       <h1 className={style.title}>North East University Bangladesh</h1>
       <h2 className={style.exam}>{title}</h2>
       <div className={style.countdown} ref={tiltRef} >
