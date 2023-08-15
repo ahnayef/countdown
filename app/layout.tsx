@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: `Countdown | ${data.title}`,
-  description: `Countdown to a | ${data.title}`,
+  description: `Countdown to | ${data.title}`,
+  keywords: "NEUB,Exam, Countdown, CSE",
 }
 
 export default function RootLayout({

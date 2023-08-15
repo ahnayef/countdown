@@ -16,10 +16,9 @@ export default async function Home() {
         <meta name="description" content="NEUB | Spring 23 | CSE" />
         <meta name="keywords" content="NEUB,Exam, Countdown, CSE" />
         <meta property="og:title" content="Examcountdown" />
-        <meta property="og:url" content="http://spring23.netlify.app" />
+        <meta property="og:url" content="https://examcountdown.vercel.app/" />
         <meta property="og:image"
           content="https://raw.githubusercontent.com/ahnayef/countdown/master/app/assets/meta.png" />
-
       </Head>
       <Countdown title={data.title} targetDate={data.targetDate} subtitle={data.subtitle} />
     </main>
