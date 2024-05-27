@@ -18,7 +18,7 @@ export default function Countdown(props: any) {
   const [date, setDate] = useState(new Date());
   const [today, setToday] = useState(date.toLocaleDateString("en-US", { weekday: 'long' }));
 
-  const MID=process.env.NEXT_PUBLIC_MID;
+  const MID = process.env.NEXT_PUBLIC_MID;
 
 
   useEffect(() => {
@@ -59,8 +59,8 @@ export default function Countdown(props: any) {
       label: `Page Visit ${today}`,
     });
 
-    
-    
+
+
     let width = document.body.clientWidth;
     if (width < 769) {
     } else {
@@ -122,7 +122,10 @@ export default function Countdown(props: any) {
 
         }
       </div>
-      <p className={style.subtitle}>{subtitle}</p>
+      {
+        difference < 0 ? <p className={style.subtitle}>The time has come!</p> :
+          <p className={style.subtitle}>Time left for the exam</p>
+      }
     </div>
   );
 }
